@@ -1,0 +1,26 @@
+﻿<h2 class="text-primary" style="text-align: center;">
+    Nuevo Cubo
+</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <label for="Nombre" class="form-label">Nombre</label>
+    <input type="text" id="Nombre" name="Nombre" class="form-control" required />
+
+    <label for="Marca" class="form-label">Marca</label>
+    <input type="text" id="Marca" name="Marca" class="form-control" required />
+
+    <label class="form-label">Seleccione un fichero: </label>
+    <input type="file" name="file" class="form-control" />
+
+    <label for="Precio" class="form-label">Precio</label>
+    <input type="number" id="Precio" name="Precio" class="form-control" required />
+
+    <div class="my-2">
+        <button class="btn btn-success">
+            Crear Cubo
+        </button>
+        <a asp-controller="Cubos"  asp-action="GetCubos" class="btn btn-secondary">
+            Volver
+        </a>
+    </div>
+</form>

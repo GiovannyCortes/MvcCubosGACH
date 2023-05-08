@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MvcCubosGACH.Models.Pedido>
+
+@{
+    ViewData["Title"] = "GetPedidos";
+}
+
+<h1>Pedidos del usuario: @Context.User.Identity.Name</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>IdPedido</th>
+            <th>IdCubo</th>
+            <th>IdUsuario</th>
+            <th>FechaPedido</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td>@item.IdPedido</td>
+            <td>@item.IdCubo</td>
+            <td>@item.IdUsuario</td>
+            <td>@item.FechaPedido</td>
+        </tr>
+    }
+    </tbody>
+</table>

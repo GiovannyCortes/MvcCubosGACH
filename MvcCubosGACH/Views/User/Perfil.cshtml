@@ -1,0 +1,18 @@
+﻿@{
+    var cosa = Context.User;
+}
+
+<div class="card" style="width: 18rem; margin: auto;">
+    <h1 style="text-align: center;">@Context.User.Identity.Name</h1>
+    <h4 style="text-align: center;">@Context.User.FindFirstValue("EMAIL")</h4>
+    <img src="@ViewData["URI"]" class="card-img-top" alt="Imagen de usuario">
+    <div class="card-body">
+        <p class="card-text">
+            Identificador del usuario: @Context.User.FindFirstValue(ClaimTypes.NameIdentifier)
+        </p>
+    </div>
+</div>
+
+<a asp-controller="Home" asp-action="Index" class="btn btn-secondary my-2">
+    Volver
+</a>

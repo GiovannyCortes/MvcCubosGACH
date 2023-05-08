@@ -1,0 +1,19 @@
+﻿<h2 class="text-primary" style="text-align: center;">
+    LogIn User
+</h2>
+
+<form method="post">
+    <label for="Email" class="form-label">Introduzca el nombre del usuario</label>
+    <input type="text" id="Email" name="Email" class="form-control" required />
+
+    <label for="password" class="form-label">Introduzca la contraseña del usuario</label>
+    <input type="text" id="password" name="Password" class="form-control" required />
+
+    <button class="btn btn-primary my-2">
+        LogIn
+    </button>
+</form>
+
+<h2 style="color: red;">
+    @ViewData["MENSAJE"]
+</h2>

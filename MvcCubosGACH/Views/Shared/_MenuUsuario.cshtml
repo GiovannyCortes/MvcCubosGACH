@@ -1,0 +1,30 @@
+<li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Cubos" asp-action="GetCubos">Cubos</a>
+</li>
+
+@if (Context.User.Identity.IsAuthenticated) {
+    <li class="nav-item">
+        <a class="nav-link text-danger" asp-controller="User" asp-action="Perfil">
+            Perfil
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-danger" asp-area="" asp-controller="Pedidos" asp-action="GetPedidos">
+            Pedidos
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-danger" asp-controller="Managed" asp-action="LogOut">
+            Log Out <span class="text-danger">@Context.User.Identity.Name</span>
+        </a>
+    </li>
+} else {
+    <li class="nav-item">
+        <a class="nav-link text-primary" asp-controller="User" asp-action="Perfil">
+            Log In
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-primary" asp-area="" asp-controller="User" asp-action="Register">Register</a>
+    </li>
+}
